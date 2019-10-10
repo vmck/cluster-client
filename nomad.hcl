@@ -24,6 +24,7 @@ client {
 
   gc_max_allocs = 300
   meta {
+    vmck_worker = true
   }
   options {
     "fingerprint.blacklist" = "env_aws"
