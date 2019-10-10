@@ -24,7 +24,6 @@ client {
 
   gc_max_allocs = 300
   meta {
-    cluster_volumes = "/opt/cluster-client/var/volumes"
   }
   options {
     "fingerprint.blacklist" = "env_aws"
