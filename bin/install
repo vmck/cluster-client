@@ -8,6 +8,18 @@ cd "$( dirname "${BASH_SOURCE[0]}" )"/..
   unzip nomad_0.9.5_linux_amd64.zip
   sudo mv nomad /usr/local/bin/
   rm nomad_0.9.5_linux_amd64.zip
+)
+
+(
+  set -x
+  curl -OL https://releases.hashicorp.com/consul/1.6.1/consul_1.6.1_linux_amd64.zip
+  unzip consul_1.6.1_linux_amd64.zip
+  sudo mv consul /usr/local/bin/
+  rm consul_1.6.1_linux_amd64.zip
+)
+
+(
+  set -x
   mkdir -p var
   sudo chown vagrant: var
 )

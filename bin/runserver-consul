@@ -1,0 +1,6 @@
+#!/bin/bash -e
+
+cd "$( dirname "${BASH_SOURCE[0]}" )"/..
+
+set -x
+exec consul agent -config-file consul.hcl
