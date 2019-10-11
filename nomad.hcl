@@ -40,7 +40,7 @@ plugin "raw_exec" {
 }
 
 consul {
-  address = "10.42.2.1:8500"
+  address = "10.42.2.2:8500"
 }
 
 vault {
