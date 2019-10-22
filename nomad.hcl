@@ -25,6 +25,7 @@ client {
   gc_max_allocs = 300
   meta {
     vmck_worker = true
+    volumes = "/opt/volumes"
   }
   options {
     "fingerprint.blacklist" = "env_aws"
