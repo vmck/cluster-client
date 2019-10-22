@@ -1,0 +1,8 @@
+#!/bin/bash -e
+
+cd "$( dirname "${BASH_SOURCE[0]}" )"/..
+
+export NOMAD_ADDR=http://10.42.2.2:4646
+
+set -x
+exec nomad node drain -self "$@"
