@@ -2,5 +2,7 @@
 
 cd "$( dirname "${BASH_SOURCE[0]}" )"/..
 
+source secrets.sh
+
 set -x
 exec nomad agent -config nomad.hcl
