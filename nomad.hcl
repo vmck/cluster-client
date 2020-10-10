@@ -1,4 +1,4 @@
-name = "hell"
+name = "hell-compute"
 data_dir = "/opt/cluster-client/var/nomad"
 leave_on_interrupt = true
 leave_on_terminate = true
@@ -17,8 +17,8 @@ advertise {
 
 client {
   enabled = true
-  network_interface = "acs"
-  servers = ["10.42.2.1:4647"]
+  network_interface = "vmck-acs"
+  servers = ["10.42.1.1:4647"]
   memory_total_mb = 0 # autodetect
 
 
@@ -30,17 +30,9 @@ client {
   }
   options {
     "fingerprint.blacklist" = "env_aws"
-    "docker.caps.whitelist" = "NET_ADMIN,CHOWN,DAC_OVERRIDE,FSETID,FOWNER,MKNOD,NET_RAW,SETGID,SETUID,SETFCAP, SETPCAP,NET_BIND_SERVICE,SYS_CHROOT,KILL,AUDIT_WRITE"
+    "docker.caps.whitelist" = "NET_ADMIN,CHOWN,DAC_OVERRIDE,FSETID,FOWNER,MKNOD,NET_RAW,SETGID,SETUID,SETFCAP,SETPCAP,NET_BIND_SERVICE,SYS_CHROOT,KILL,AUDIT_WRITE"
     "docker.privileged.enabled" = "true"
-  }
-}
-
-plugin "docker" {
-  config {
-    volumes {
-      enabled = true
-    }
-    allow_privileged = true
+    "docker.volumes.enabled" = "true"
   }
 }
 
