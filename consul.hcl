@@ -1,9 +1,9 @@
-node_name = "acs-quark"
-server_name = "acs-quark"
-bind_addr = "10.42.2.2"
-client_addr = "10.42.2.2"
+node_name = "hell"
+server_name = "hell"
+bind_addr = "10.42.2.4"
+client_addr = "10.42.2.4"
 addresses {
-  http = "10.42.2.2"
+  http = "10.42.2.4"
 }
 data_dir = "/opt/cluster-client/var/consul"
 datacenter = "dc1"

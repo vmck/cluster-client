@@ -1,18 +1,18 @@
-name = "acs-quark"
+name = "hell"
 data_dir = "/opt/cluster-client/var/nomad"
 leave_on_interrupt = true
 leave_on_terminate = true
 
 addresses {
-  http = "10.42.2.2"
-  rpc = "10.42.2.2"
-  serf = "10.42.2.2"
+  http = "10.42.2.4"
+  rpc = "10.42.2.4"
+  serf = "10.42.2.4"
 }
 
 advertise {
-  http = "10.42.2.2"
-  rpc = "10.42.2.2"
-  serf = "10.42.2.2"
+  http = "10.42.2.4"
+  rpc = "10.42.2.4"
+  serf = "10.42.2.4"
 }
 
 client {
@@ -25,6 +25,7 @@ client {
   gc_max_allocs = 300
   meta {
     vmck_worker = true
+    acs_job = true
     volumes = "/opt/volumes"
   }
   options {
@@ -41,7 +42,7 @@ plugin "raw_exec" {
 }
 
 consul {
-  address = "10.42.2.2:8500"
+  address = "10.42.2.4:8500"
 }
 
 vault {
